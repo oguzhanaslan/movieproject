@@ -1,9 +1,4 @@
-$icon-font-path: '../fonts/';
-$fontAlegreya: 'Alegreya Sans', sans-serif;
-$orangeColor:  #fbc300;
-$blackColor: #21242A;
-$blueColor: #278EFE;
-$redColor: #FF5757;
+@import "mixin";
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
@@ -78,7 +73,7 @@ a:link, a:visited, a:hover {
   height: 400px;
 
   .owl-dots {
-    margin-top: -40px !important;
+    margin-top: -50px !important;
     z-index: 200;
     position: relative;
   }
@@ -105,24 +100,47 @@ a:link, a:visited, a:hover {
       height: 200px;
       margin-left: -300px;
       margin-top: -90px;
+      .category {
+        margin-top: 10px;
+      }
+
+      .category-link {
+        color: #ffffff;
+        font-size: 18px; 
+        &:last-child:after {
+          content: '';
+        } 
+        &:after {
+          content: ',';
+        }
+        &:hover {
+          color: darken(#fff, 20%)
+        }
+      }
 
       h2 {
         font-size: 40px;
+        text-transform: uppercase;
         font-weight: bold;
-        padding-bottom: 20px;
+        padding-bottom: 10px;
+        margin: 0;
+        @extend .text-shadow;
       }
 
-      a {
+      .watch-link {
         background-color: $orangeColor;
-        color: #fff;
-        padding: 10px 20px;
-        border-radius: 6px;
+        display: inline-block;
+        color: $blackColor;
+        padding: 10px 40px;
+        border-radius: 25px;
+        margin-top: 30px;
+        font-size:21px;
+
         &:hover {
           background-color: darken($orangeColor, 5%);
-
         }
-        
       }
+
     }
   }
 }
