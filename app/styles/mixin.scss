@@ -1,5 +1,6 @@
 $icon-font-path: '../fonts/';
 $fontAlegreya: 'Alegreya Sans', sans-serif;
+$fontLato: 'Lato', sans-serif;
 $orangeColor:  #fbc300;
 $blackColor: #21242A;
 $blueColor: #278EFE;
@@ -7,4 +8,8 @@ $redColor: #FF5757;
 
 .text-shadow {
   text-shadow: 1px 0 2px #000;
+}
+
+.transition-effect {
+	transition: all 0.25s ease-out; 
 }
